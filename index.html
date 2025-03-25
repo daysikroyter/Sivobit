@@ -1,14 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Sivobit</title>
-</head>
-<body>
-  
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Sivobit</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <a class="logo" href="#hero">
+            <img
+              class="logo__img"
+              src="images/logo.svg"
+              width="200"
+              height="50"
+              alt="Sivobit"
+            />
+            <span class="sr-only">go to sivobit</span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#hero">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#about">Despre noi</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#projects">Servicii</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#cooperation">Etapele cooperării</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#team">Our team</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contacts">Contacte</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section
+        class="hero"
+        id="hero"
+        style="background-image: url('images/hero-bg.jpg')"
+      >
+        <div class="container">
+          <div class="hero__box">
+            <div class="hero__inner">
+              <h1 class="hero__title animate anim-no-hide">
+                Extensive Digital – soluții IT inovatoare pentru afacerea dvs
+              </h1>
+              <p class="hero__text animate">
+                Dezvoltarea și crearea de site-uri web individuale în Chișinău
+                și Moldova
+              </p>
+              <a class="hero__link" href="#contacts">Suna-ne</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about section section-odd" id="about">
+        <div class="container">
+          <h2 class="title">De ce noi?</h2>
+          <p class="about__text">
+            Мы – команда экспертов в цифровой трансформации. Разрабатываем
+            мощные IT-решения для бизнеса, которые повышают эффективность и
+            конкурентоспособность
+          </p>
+          <ul class="about__items">
+            <li
+              class="about__item animate anim-no-hide"
+              style="background-image: url('images/expertise-bg.jpg')"
+            >
+              <h3 class="about__title">Глубокая экспертиза</h3>
+              <p class="about__descr">
+                Более X лет создаем IT-решения, которые действительно работают.
+                Наши специалисты – это эксперты в разработке ПО, автоматизации и
+                цифровой трансформации
+              </p>
+            </li>
+            <li
+              class="about__item animate anim-no-hide"
+              style="background-image: url('images/tehnology-bg.jpg')"
+            >
+              <h3 class="about__title">Передовые технологии</h3>
+              <p class="about__descr">
+                Используем AI, Big Data, IoT и облачные решения, чтобы ваш
+                бизнес был на шаг впереди конкурентов
+              </p>
+            </li>
+            <li
+              class="about__item animate anim-no-hide"
+              style="background-image: url('images/result-bg.jpg')"
+            >
+              <h3 class="about__title">Результат, а не просто код</h3>
+              <p class="about__descr">
+                Мы не просто разрабатываем – мы помогаем вашему бизнесу расти,
+                масштабироваться и зарабатывать больше
+              </p>
+            </li>
+          </ul>
+          <ul class="about__list">
+            <li class="about__elem about__elem--clients">
+              <span class="about__num">228+</span>
+              <strong class="about__name">Довольных клиентов</strong>
+            </li>
+            <li class="about__elem about__elem--code">
+              <span class="about__num">228+</span>
+              <strong class="about__name">Строчек кода</strong>
+            </li>
+            <li class="about__elem about__elem--projects">
+              <span class="about__num">228+</span>
+              <strong class="about__name">Сделанных проектов</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="projects section section-even">
+        <div class="container">
+          <h2 class="title">Наши проекты</h2>
+          <p class="projects__text">
+            Мы создаем IT-решения, которые помогают бизнесу расти,
+            автоматизировать процессы и повышать эффективность. Вот несколько
+            примеров наших успешных проектов:
+          </p>
+          <div class="projects__swiper swiper">
+            <ul class="swiper-wrapper projects__swiper-wrapper">
+              <li class="swiper-slide projects__swiper-slide">
+                <a class="projects__link" href="#">
+                  <img
+                    src="images/slide-1.png"
+                    width="1008"
+                    height="591"
+                    alt="first project"
+                  />
+                </a>
+              </li>
+              <li class="swiper-slide projects__swiper-slide">
+                <a class="projects__link" href="#">
+                  <img
+                    src="images/slide-1.png"
+                    width="1008"
+                    height="591"
+                    alt="first project"
+                  />
+                </a>
+              </li>
+              <li class="swiper-slide projects__swiper-slide">
+                <a class="projects__link" href="#">
+                  <img
+                    src="images/slide-1.png"
+                    width="1008"
+                    height="591"
+                    alt="first project"
+                  />
+                </a>
+              </li>
+              <li class="swiper-slide projects__swiper-slide">
+                <a class="projects__link" href="#">
+                  <img
+                    src="images/slide-1.png"
+                    width="1008"
+                    height="591"
+                    alt="first project"
+                  />
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-button-next projects__next-arrow projects__btn"></div>
+            <div class="swiper-button-prev projects__prev-arrow projects__btn"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-odd"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <a class="logo footer-nav__logo" href="#hero">
+            <img
+              class="logo__img"
+              src="images/logo-white.svg"
+              width="249"
+              height="62"
+              alt="Sivobit"
+            />
+            <span class="sr-only">go to sivobit</span>
+          </a>
+          <div class="footer-nav__links">
+            <strong class="footer-nav__title">Linkuri</strong>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#hero">Home</a>
+              </li>
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#about">Despre noi</a>
+              </li>
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#projects">Servicii</a>
+              </li>
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#cooperation"
+                  >Etapele cooperării</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#team">Our team</a>
+              </li>
+              <li class="footer-nav__list-item">
+                <a class="footer-nav__link" href="#contacts">Contacte</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__contact">
+            <strong class="footer-nav__title">Свяжитесь с нами</strong>
+            <dl class="footer-nav__items">
+              <div class="footer-nav__item">
+                <dt>Phone:</dt>
+                <dd>
+                  <a class="footer-nav__item-link" href="tel:+37300000000"
+                    >+373-000-00-000</a
+                  >
+                </dd>
+              </div>
+              <div class="footer-nav__item">
+                <dt>Email:</dt>
+                <dd>
+                  <a class="footer-nav__item-link" href="mailto:v.rotdaval.md"
+                    >v.rotdaval.md</a
+                  >
+                </dd>
+              </div>
+              <div class="footer-nav__item">
+                <dt>Adress:</dt>
+                <dd>
+                  <a
+                    class="footer-nav__item-link"
+                    href="https://www.google.com/maps/place/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0+%D0%BF%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0+%D0%B4%D0%BE%D0%BC+%D0%9A%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0/@54.6588983,67.1268749,17z/data=!3m1!4b1!4m6!3m5!1s0x43b42100770b4b19:0x8547152fc0bc0d11!8m2!3d54.6588952!4d67.1294498!16s%2Fg%2F11wc9rcxnz?hl=ru&entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Puskina Kolotuskina</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

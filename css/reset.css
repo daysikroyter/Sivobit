@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -41,6 +42,10 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
+}
+
+strong {
   display: block;
 }
 
