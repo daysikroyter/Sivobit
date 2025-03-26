@@ -17,6 +17,22 @@ const projectsSlider = new Swiper(".projects__swiper", {
   },
 });
 
+const teamSlider = new Swiper(".team__swiper", {
+  effect: "cube",
+  grabCursor: true,
+  loop: true,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 const animItems = document.querySelectorAll(".animate");
 
 if (animItems.length > 0) {
@@ -58,3 +74,15 @@ if (animItems.length > 0) {
     animOnScroll();
   }, 300);
 }
+
+const header = document.querySelector(".header");
+
+function handleScroll() {
+  if (window.scrollY > 0) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
