@@ -12,6 +12,7 @@ body {
   color: var(--black-color);
   background-color: var(--white-color);
   text-align: center;
+  overflow-x: hidden;
 }
 
 .sr-only {
@@ -38,7 +39,8 @@ body {
 }
 
 .section-even {
-  background-color: var(--accent-color);
+  position: relative;
+  background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%);
   color: var(--white-color);
 }
 
@@ -722,14 +724,14 @@ body {
 }
 
 .about__elem.about__elem--clients::before {
-  background-image: url("../images/icons/users-icon.svg");
+  background-image: url("../images/icons/users.svg");
 }
 
 .about__elem.about__elem--code::before {
-  background-image: url("../images/icons/code-icon.svg");
+  background-image: url("../images/icons/code.svg");
 }
 .about__elem.about__elem--projects::before {
-  background-image: url("../images/icons/projects-icon.svg");
+  background-image: url("../images/icons/projects.svg");
 }
 
 .about__num {
@@ -968,6 +970,31 @@ body {
   position: relative;
   text-align: left;
   padding-left: 142px;
+}
+
+.swiper.team__swiper {
+  width: 100%; /* Заменяем фиксированную ширину на 100% */
+  max-width: 500px; /* Ограничиваем максимальную ширину */
+}
+
+.swiper-wrapper.team__swiper-wrapper {
+  width: 100%;
+}
+
+.swiper-slide.team__swiper-slide {
+  width: 100%; /* Слайды также будут занимать 100% ширины контейнера */
+  border-radius: 20px;
+  background-color: var(--white-color);
+  color: var(--accent-color);
+}
+
+/* Стили для изображений */
+.team__img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 15px;
 }
 
 .contacts__item::before {
@@ -1224,6 +1251,25 @@ body {
   text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   color: var(--accent-color);
   transform: scale(0.9);
+}
+
+@media (max-width: 1300px) {
+  .cooperation__list {
+    gap: 50px 100px;
+    padding: 0 30px;
+  }
+
+  .cooperation__item {
+    margin-right: 0;
+  }
+
+  .cooperation__item:last-child {
+    order: 1;
+  }
+
+  .cooperation__decor {
+    display: none;
+  }
 }
 
 @media (max-width: 1200px) {
