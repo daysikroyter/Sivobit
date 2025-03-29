@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/icons/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,41 +23,62 @@
       <div class="container">
         <nav class="menu">
           <a class="logo" href="#hero">
-            <img
-              class="logo__img"
-              src="images/logo.svg"
-              width="200"
-              height="50"
-              alt="Sivobit"
-            />
+            <img class="logo__icon" src="images/icons/favicon.svg" width="45" height="50" alt="Sivobit icon">
+            <img src="images/logo-second.svg" width="200" height="50" alt="Sivobit logo">
             <span class="sr-only">go to sivobit</span>
           </a>
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#hero">Home</a>
+              <a class="menu__link link" href="#hero">Home</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#about">Despre noi</a>
+              <a class="menu__link link" href="#about">Despre noi</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#projects">Servicii</a>
+              <a class="menu__link link" href="#projects">Servicii</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#cooperation">Etapele cooperării</a>
+              <a class="menu__link link" href="#cooperation"
+                >Etapele cooperării</a
+              >
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#team">Our team</a>
+              <a class="menu__link link" href="#team">Our team</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#contacts">Contacte</a>
+              <a class="menu__link link" href="#contacts">Contacte</a>
             </li>
           </ul>
+          <div id="hamburger" class="hamburglar is-open">
+
+    <div class="burger-icon">
+      <div class="burger-container">
+        <span class="burger-bun-top"></span>
+        <span class="burger-filling"></span>
+        <span class="burger-bun-bot"></span>
+      </div>
+    </div>
+    <div class="burger-ring">
+      <svg class="svg-ring">
+        <path class="path" fill="none" stroke="#6347eb" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+      </svg>
+    </div>    
+    <svg width="0" height="0">
+       <mask id="mask">
+    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+       </mask>
+     </svg>
+    <div class="path-burger">
+      <div class="animate-path">
+        <div class="path-rotation"></div>
+      </div>
+    </div>
         </nav>
       </div>
     </header>
 
     <main class="main">
-      <section
+       <section
         class="hero"
         id="hero"
         style="background-image: url('images/hero-bg.jpg')"
@@ -72,11 +93,12 @@
                 Dezvoltarea și crearea de site-uri web individuale în Chișinău
                 și Moldova
               </p>
-              <a class="hero__link" href="#contacts">Contactează-ne</a>
+              <a class="hero__link btn" href="#contacts">Contactează-ne</a>
             </div>
           </div>
         </div>
       </section>
+      <!--
       <section class="about section section-odd" id="about">
         <div class="container">
           <h2 class="title">De ce noi?</h2>
@@ -157,6 +179,7 @@
                     height="591"
                     alt="Maxsem"
                   />
+                  <span class="sr-only">go to Maxsem</span>
                 </a>
               </li>
               <li class="swiper-slide projects__swiper-slide">
@@ -172,6 +195,7 @@
                     height="591"
                     alt="Remax"
                   />
+                  <span class="sr-only">go to Remax</span>
                 </a>
               </li>
               <li class="swiper-slide projects__swiper-slide">
@@ -187,6 +211,7 @@
                     height="591"
                     alt="Jysk"
                   />
+                  <span class="sr-only">go to Jysk</span>
                 </a>
               </li>
               <li class="swiper-slide projects__swiper-slide">
@@ -202,6 +227,7 @@
                     height="591"
                     alt="Simplex"
                   />
+                  <span class="sr-only">go to Simplex</span>
                 </a>
               </li>
             </ul>
@@ -379,9 +405,7 @@
       <section class="section contacts section-odd" id="contacts">
         <div class="container">
           <h2 class="title">Как с нами связаться?</h2>
-          <p class="text">
-            Заполните форму и получите оперативный ответ
-          </p>
+          <p class="text">Заполните форму и получите оперативный ответ</p>
           <div class="contacts__inner">
             <form class="contacts__form">
               <ol class="contacts__list">
@@ -459,7 +483,7 @@
                   </label>
                 </li>
               </ol>
-              <button class="contacts__btn" type="submit">Отправить</button>
+              <button class="contacts__btn btn" type="submit">Отправить</button>
             </form>
             <div class="contacts__box">
               <strong class="contacts__title"> Наши контакты: </strong>
@@ -467,27 +491,26 @@
                 <li class="contacts__list-item contacts__list-item--whatsapp">
                   <ul class="contacts__list-items">
                     <li class="contacts__elem">
-                      <a class="contacts__link" href="tel:+37360216000"
+                      <a class="contacts__link link" href="tel:+37360216000"
                         >+373-60-216-000</a
                       >
                     </li>
                     <li class="contacts__elem">
-                      <a class="contacts__link" href="tel:+37368789723"
+                      <a class="contacts__link link" href="tel:+37368789723"
                         >+373-68-789-723</a
                       >
                     </li>
                   </ul>
                 </li>
-
                 <li class="contacts__list-item contacts__list-item--telegram">
                   <ul class="contacts__list-items">
                     <li class="contacts__elem">
-                      <a class="contacts__link" href="tel:+37360216000"
+                      <a class="contacts__link link" href="tel:+37360216000"
                         >+373-60-216-000</a
                       >
                     </li>
                     <li class="contacts__elem">
-                      <a class="contacts__link" href="tel:+37368789723"
+                      <a class="contacts__link link" href="tel:+37368789723"
                         >+373-68-789-723</a
                       >
                     </li>
@@ -497,15 +520,15 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <nav class="footer-nav">
           <a class="footer__logo" href="#hero">
             <img
-              src="images/sivobit-icon.svg"
+              src="images/icons/sivobit-icon.svg"
               width="250"
               height="250"
               alt="sivobit"
@@ -515,24 +538,24 @@
             <strong class="footer-nav__title">Linkuri</strong>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#hero">Home</a>
+                <a class="footer-nav__link link" href="#hero">Home</a>
               </li>
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#about">Despre noi</a>
+                <a class="footer-nav__link link" href="#about">Despre noi</a>
               </li>
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#projects">Servicii</a>
+                <a class="footer-nav__link link" href="#projects">Servicii</a>
               </li>
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#cooperation"
+                <a class="footer-nav__link link" href="#cooperation"
                   >Etapele cooperării</a
                 >
               </li>
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#team">Our team</a>
+                <a class="footer-nav__link link" href="#team">Our team</a>
               </li>
               <li class="footer-nav__list-item">
-                <a class="footer-nav__link" href="#contacts">Contacte</a>
+                <a class="footer-nav__link link" href="#contacts">Contacte</a>
               </li>
             </ul>
           </div>
@@ -542,7 +565,7 @@
               <div class="footer-nav__item">
                 <dt>Phone:</dt>
                 <dd>
-                  <a class="footer-nav__item-link" href="tel:+37300000000"
+                  <a class="footer-nav__item-link link" href="tel:+37300000000"
                     >+373-000-00-000</a
                   >
                 </dd>
@@ -550,7 +573,7 @@
               <div class="footer-nav__item">
                 <dt>Email:</dt>
                 <dd>
-                  <a class="footer-nav__item-link" href="mailto:v.rotdaval.md"
+                  <a class="footer-nav__item-link link" href="mailto:v.rotdaval.md"
                     >v.rotdaval.md</a
                   >
                 </dd>
@@ -559,7 +582,7 @@
                 <dt>Adress:</dt>
                 <dd>
                   <a
-                    class="footer-nav__item-link"
+                    class="footer-nav__item-link link"
                     href="https://www.google.com/maps/place/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0+%D0%BF%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0+%D0%B4%D0%BE%D0%BC+%D0%9A%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0/@54.6588983,67.1268749,17z/data=!3m1!4b1!4m6!3m5!1s0x43b42100770b4b19:0x8547152fc0bc0d11!8m2!3d54.6588952!4d67.1294498!16s%2Fg%2F11wc9rcxnz?hl=ru&entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -571,7 +594,7 @@
           </div>
         </nav>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
