@@ -942,7 +942,8 @@ background-color: var(--accent-color);
 }
 
 .contacts__input[type="number"] {
-  -moz-appearance: textfield;
+  -moz-appearance: textfield; /* для Firefox */
+  appearance: textfield; /* стандартное свойство для других браузеров */
 }
 
 .contacts__textarea {
