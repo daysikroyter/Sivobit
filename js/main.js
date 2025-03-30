@@ -91,6 +91,7 @@ window.addEventListener("scroll", handleScroll);
 const trigger = document.getElementById("hamburger");
 const menu = document.querySelector(".menu-burger");
 const menuBurger = document.querySelector(".menu-burger__list");
+const logo = document.querySelector('.header .logo');
 let isClosed = true;
 
 trigger.addEventListener("click", function () {
@@ -103,12 +104,14 @@ function burgerTime() {
     trigger.classList.add("is-closed");
     menu.classList.remove("open");
     menuBurger.classList.remove("show");
+    logo.classList.remove("active");
     isClosed = false;
   } else {
     trigger.classList.remove("is-closed");
     trigger.classList.add("is-open");
     menu.classList.add("open");
     menuBurger.classList.add("show");
+    logo.classList.add("active");
     isClosed = true;
   }
 }
