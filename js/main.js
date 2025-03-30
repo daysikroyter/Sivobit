@@ -112,3 +112,4 @@ function burgerTime() {
     isClosed = true;
   }
 }
+
