@@ -40,8 +40,33 @@ body {
 
 .section-even {
   position: relative;
-  background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%);
+  /* background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%); */
   color: var(--white-color);
+  background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+  /* background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite; */
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.section-odd .title,
+.section-odd .text,
+.about__elem,
+.cooperation__title,
+.cooperation__text {
+  background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 10s linear infinite;
 }
 
 .container {
