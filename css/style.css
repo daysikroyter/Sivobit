@@ -40,9 +40,9 @@ body {
 
 .section-even {
   position: relative;
-  /* background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%); */
+  background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%);
   color: var(--white-color);
-  background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+  /* background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff); */
   /* background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -61,7 +61,14 @@ body {
 .about__elem,
 .cooperation__title,
 .cooperation__text {
-  background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+  background: linear-gradient(
+    to right,
+    #fc72ff,
+    #8f68ff,
+    #487bff,
+    #8f68ff,
+    #fc72ff
+  );
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -140,6 +147,7 @@ body {
   line-height: 1;
   transition: box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease,
     transform 0.5s ease, text-shadow 0.5s ease;
+  background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%);
 }
 
 .btn:focus {
@@ -541,6 +549,7 @@ body {
   width: 0;
   border-radius: 50%;
   z-index: 10;
+  background: linear-gradient(94deg, #c89afc 9.51%, #7c6afa 90.23%);
   transition-duration: 0.4s;
 }
 
@@ -1519,7 +1528,8 @@ body {
     font-size: 20px;
   }
 
-  .contacts__input, .contacts__textarea {
+  .contacts__input,
+  .contacts__textarea {
     font-size: 20px;
     padding: 15px;
   }
@@ -1543,7 +1553,7 @@ body {
 
 @media (max-width: 680px) {
   .contacts__item::before,
-  .contacts__item:not(:first-child)::after  {
+  .contacts__item:not(:first-child)::after {
     display: none;
   }
 
