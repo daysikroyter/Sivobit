@@ -93,12 +93,28 @@ body.active {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 25px;
+  transform: translate(0, 120px);
+  opacity: 0;
+}
+
+.title.active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease 0.5s;
 }
 
 .text {
   font-size: 28px;
   max-width: 992px;
   margin: 0 auto 50px;
+  transform: translate(0, 120px);
+  opacity: 0;
+}
+
+.text.active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease 1s;
 }
 
 .link {
@@ -719,26 +735,28 @@ body.active {
   margin-bottom: 70px;
   max-width: 1167px;
   position: relative;
+  transform: translate(0, 100px);
+  opacity: 0;
 }
 
-/* .hero__title.active {
+.hero__title.active {
   transform: translate(0, 0);
   opacity: 1;
-} */
+}
 
 .hero__text {
   font-size: 36px;
   margin-bottom: 138px;
-  /* transform: translate(0px, 50px);
-  opacity: 0; */
-  transition: transform 0.8s ease, opacity 0.8s ease 0s;
+  transform: translate(0px, 50px);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease 0s;
 }
 
-/* .hero__text.active {
+.hero__text.active {
   transform: translate(0, 0);
   opacity: 1;
-  transition: transform 0.8s ease, opacity 0.8s ease 0.5s;
-} */
+  transition: transform 1s ease, opacity 1s ease 0.5s;
+}
 
 .hero__link {
   font-size: 28px;
@@ -749,6 +767,12 @@ body.active {
   border-radius: 20px;
   color: var(--white-color);
   background-color: var(--accent-color);
+  transform: scale(0);
+}
+
+.hero__link.active {
+  transform: scale(1);
+  transition: transform 1s 1s;
 }
 
 .about__text {
@@ -793,6 +817,31 @@ body.active {
   transform: scale(1);
   transition: transform 0.8s ease 3s;
 } */
+
+.about__item:first-child {
+  transform: scale(0);
+}
+
+.about__item.active:first-child {
+  transform: scale(1);
+  transition: transform 0.5s ease 1.5s;
+}
+.about__item:nth-child(2) {
+  transform: scale(0);
+}
+
+.about__item.active:nth-child(2) {
+  transform: scale(1);
+  transition: transform 0.5s ease 2s;
+}
+.about__item:last-child {
+  transform: scale(0);
+}
+
+.about__item.active:last-child {
+  transform: scale(1);
+  transition: transform 0.5s ease 2.5s;
+}
 
 .about__title {
   font-size: 24px;

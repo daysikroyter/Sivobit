@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Анимации при скролле
   const animItems = document.querySelectorAll(".animate");
   if (animItems.length > 0) {
     window.addEventListener("scroll", animOnScroll);
@@ -75,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // Управление хедером
   const header = document.querySelector(".header");
   let lastScrollY = window.scrollY;
   let isAnchorScrolling = false;
@@ -109,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
   checkInitialPosition();
   window.addEventListener("scroll", handleScroll);
 
-  // Бургер-меню
   const trigger = document.getElementById("hamburger");
   const menu = document.querySelector(".menu-burger");
   const menuBurger = document.querySelector(".menu-burger__list");
@@ -117,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
   let isMenuClosed = true;
 
-  // Функция для переключения состояния бургер-меню
   function burgerTime() {
     trigger.classList.toggle("is-open", isMenuClosed);
     trigger.classList.toggle("is-closed", !isMenuClosed);
@@ -128,21 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
     isMenuClosed = !isMenuClosed;
   }
 
-  // Переключение бургер-меню при клике
   trigger.addEventListener("click", burgerTime);
 
-  // Обработчик изменения ориентации экрана (resize)
   function handleOrientationChange() {
-    // Если меню открыто, закрываем его при изменении ориентации
     if (!isMenuClosed) {
       burgerTime();
     }
   }
 
-  // Добавление обработчика события изменения ориентации экрана
   window.addEventListener("resize", handleOrientationChange);
 
-  // Якорные ссылки
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -162,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       isAnchorScrolling = true;
 
-      // При переходе по якорям, кроме #hero, скрыть хедер
       if (href === "#hero") {
         header.classList.remove("active", "hide");
       } else {
@@ -177,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       scrollTimeout = setTimeout(() => {
         isAnchorScrolling = false;
-        // После завершения скроллинга, скрыть хедер, если это не #hero
         if (href === "#hero") {
           header.classList.remove("active", "hide");
         } else {
@@ -188,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Обработка hash при загрузке страницы
   if (window.location.hash) {
     const targetElement = document.querySelector(window.location.hash);
     if (targetElement) {
@@ -197,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
         top: targetElement.offsetTop,
         behavior: "auto",
       });
-      // Если hash равен #hero, то хедер не скрывается
       if (window.location.hash === "#hero") {
         header.classList.remove("active", "hide");
       } else {
