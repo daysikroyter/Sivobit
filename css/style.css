@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
 }
 
+body.active {
+  overflow-y: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -167,12 +171,16 @@ body {
   right: 0;
   z-index: 55;
   box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease, box-shadow 0.1s ease;
+  transition: background-color 0.5s ease, box-shadow 0.1s ease, transform 0.5s ease;
 }
 
 .header.active {
   background-color: var(--white-color);
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header.hide {
+  transform: translateY(-100%);
 }
 
 .header.active .menu {
@@ -687,9 +695,8 @@ body {
   align-items: center;
   justify-content: center;
   transition: min-height 0.5s ease, height 0.5s ease;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  min-height: 100dvh;
+  transition: height 0.5s ease; /* Обновляем только height */
+  height: 100vh; /* Начальная высота 100% от видимой области */
 }
 
 .logo path{
@@ -1075,6 +1082,8 @@ body {
 .team__img {
   width: 100%;
   object-fit: cover;
+  max-width: 100%;
+  object-position: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-bottom: 15px;
