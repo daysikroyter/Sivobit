@@ -597,7 +597,7 @@ body.active {
     border-radius 0.5s ease;
 
   opacity: 0;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 @keyframes bg {
@@ -607,6 +607,12 @@ body.active {
   100% {
     background-position: 400% 50%;
   }
+}
+
+.menu-burger__inner {
+  overflow-y: auto;
+  padding-bottom: 50px;
+  height: calc(100vh - 120px);
 }
 
 .menu-burger.open {
@@ -694,7 +700,7 @@ body.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .logo path{
@@ -707,6 +713,7 @@ body.active {
 
 .hero__inner {
   padding-top: 140px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
