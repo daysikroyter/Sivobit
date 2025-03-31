@@ -688,13 +688,30 @@ body.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero__content {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
 }
 
 .hero__box {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .logo path {
@@ -706,8 +723,6 @@ body.active {
 }
 
 .hero__inner {
-  padding-top: 140px;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
