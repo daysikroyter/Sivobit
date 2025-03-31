@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Инициализация слайдеров
+  function updateHeight() {
+    const height = window.innerHeight;
+    document.querySelector(".hero__box").style.minHeight = `${height}px`;
+  }
+
+  // Обновляем высоту при изменении размера окна
+  window.addEventListener("resize", updateHeight);
+
+  // Первоначальная установка
+  updateHeight();
+
   const projectsSlider = new Swiper(".projects__swiper", {
     grabCursor: true,
     effect: "creative",
