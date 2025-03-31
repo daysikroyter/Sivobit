@@ -200,18 +200,4 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     checkInitialPosition();
   }
-
-  // Динамическое обновление высоты для hero__box
-  const heroBox = document.querySelector(".hero__box");
-
-  function setHeroBoxHeight() {
-    // Устанавливаем высоту на 100% от видимой области окна
-    heroBox.style.height = `${window.innerHeight}px`;
-  }
-
-  // Устанавливаем высоту сразу после загрузки
-  setHeroBoxHeight();
-
-  // Обновляем высоту при изменении размера окна
-  window.addEventListener("resize", setHeroBoxHeight);
 });

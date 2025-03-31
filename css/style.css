@@ -694,9 +694,7 @@ body.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: min-height 0.5s ease, height 0.5s ease;
-  transition: height 0.5s ease; /* Обновляем только height */
-  height: 100vh; /* Начальная высота 100% от видимой области */
+  height: 100vh;
 }
 
 .logo path{
