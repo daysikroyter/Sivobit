@@ -171,7 +171,8 @@ body.active {
   right: 0;
   z-index: 55;
   box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.5s ease, box-shadow 0.1s ease, transform 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.1s ease,
+    transform 0.5s ease;
 }
 
 .header.active {
@@ -703,7 +704,7 @@ body.active {
   min-height: 100vh;
 }
 
-.logo path{
+.logo path {
   transition: fill 0.5s ease;
 }
 
@@ -1727,6 +1728,17 @@ body.active {
     left: -90px;
     top: -40px;
     transform: none;
+    width: 75px;
+    height: 75px;
+  }
+
+  .contacts__list-item {
+    padding-left: 100px;
+  }
+
+  .contacts__list-item::before {
+    top: 2px;
+    left: 10px;
     width: 75px;
     height: 75px;
   }

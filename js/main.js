@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
   let isMenuClosed = true;
 
+  // Функция для переключения состояния бургер-меню
   function burgerTime() {
     trigger.classList.toggle("is-open", isMenuClosed);
     trigger.classList.toggle("is-closed", !isMenuClosed);
@@ -127,7 +128,19 @@ document.addEventListener("DOMContentLoaded", function () {
     isMenuClosed = !isMenuClosed;
   }
 
+  // Переключение бургер-меню при клике
   trigger.addEventListener("click", burgerTime);
+
+  // Обработчик изменения ориентации экрана (resize)
+  function handleOrientationChange() {
+    // Если меню открыто, закрываем его при изменении ориентации
+    if (!isMenuClosed) {
+      burgerTime();
+    }
+  }
+
+  // Добавление обработчика события изменения ориентации экрана
+  window.addEventListener("resize", handleOrientationChange);
 
   // Якорные ссылки
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
